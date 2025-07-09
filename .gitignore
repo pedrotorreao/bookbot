@@ -1,2 +1,5 @@
 books/
 .vscode/
+__pycache__/
+buggy/
+bd*
