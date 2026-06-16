@@ -7,9 +7,9 @@ Found {word_count} total words
 --------- Character Count -------
 """)
     for item in char_sorted_list:
-        if not item["char"].isalpha():
+        if not item[0].isalpha():
             continue
-        print(f"{item['char']}: {item['num']}") 
+        print(f"{item[0]}: {item[1]}") 
     
     print("============= END ===============")
 

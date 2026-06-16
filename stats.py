@@ -12,14 +12,12 @@ def count_characters(file_contents):
    
     return charac_dict
 
-def sort_on(d):
-    return d["num"]
+def sort_on(ch_count: tuple[str, int]) -> int:
+    return ch_count[1]
 
-def sort_dict(unsorted_dict):
-    sorted_list = []
-    for ch in unsorted_dict:
-        sorted_list.append({"char": ch, "num": unsorted_dict[ch]})
+def chars_dict_to_sorted_list(ch_dict: dict[str, int]) -> list[tuple[str, int]]:
+    ch_list = []
+    for ch in ch_dict:
+        ch_list.append((ch, ch_dict[ch]))
 
-    sorted_list.sort(reverse=True, key=sort_on)
-
-    return sorted_list
+    return sorted(ch_list, reverse=True, key=sort_on)
