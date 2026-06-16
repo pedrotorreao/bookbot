@@ -13,22 +13,17 @@ def main():
 
     # retrieve file contents of filepath:
     file_contents = get_book_text(file_path)
+    
     # calculate the number of words in the file:
     num_of_words = count_words(file_contents)
+    
     # calculate the character frequency: 
     char_count = count_characters(file_contents)
+    
     # build a sorted list from character frequencies:
-    char_sorted_list = sort_dict(char_count)
-    
+    ch_sorted_list = chars_dict_to_sorted_list(char_count)
 
-    '''
-    print(f"{num_of_words} words found in the document")
-    
-    for ch in char_count:
-        print(f"'{ch}': {char_count[ch]}")
-    '''
-
-    print_report(file_path, num_of_words, char_sorted_list)
+    print_report(file_path, num_of_words, ch_sorted_list)
     
 
 main()
